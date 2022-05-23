@@ -5,13 +5,12 @@ import com.rabbitmq.client.ConnectionFactory;
 import com.rabbitmq.client.Connection;
 import com.rabbitmq.client.MessageProperties;
 import lombok.SneakyThrows;
-import org.springframework.boot.test.context.SpringBootTest;
 
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.util.concurrent.TimeoutException;
 
-class SpringbootrabbitmqApplicationTests {
+class Producer {
 
     @SneakyThrows
     public static void main(String[] args)  {
