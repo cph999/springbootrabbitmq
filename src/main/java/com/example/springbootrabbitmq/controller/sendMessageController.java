@@ -22,7 +22,8 @@ public class sendMessageController {
     @RequestMapping("/ttl/sendMsg/{message}")
     public void sendMessage(@PathVariable String  message){
         log.info("当前时间：{}，发送一条消息给两个队列:{}",new Date().toString(),message);
-        rabbitTemplate.convertAndSend("X","XA","消息来自ttl 10s的队列"+message);
-        rabbitTemplate.convertAndSend("X","XB","消息来自ttl 40s的队列"+message);
+        rabbitTemplate.convertAndSend("X","XA","消息来自ttl 1s的队列"+message);
+        rabbitTemplate.convertAndSend("X","XB","消息来自ttl 2s的队列"+message);
+        log.info("发送完毕");
     }
 }

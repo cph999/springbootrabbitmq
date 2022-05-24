@@ -37,7 +37,7 @@ public class TtlQueueConfig {
         HashMap<String, Object> arguments = new HashMap<>(3);
         arguments.put("x-dead-letter-exchange",Y_DEAD_LETTER_EXCHANGE);
         arguments.put("x-dead-letter-routing-key","YD");
-        arguments.put("x-message-ttl",1000*10);
+        arguments.put("x-message-ttl",1000*1);
         return  QueueBuilder.durable(QUEUE_A).withArguments(arguments).build();
     }
     @Bean("queueB")
@@ -45,7 +45,7 @@ public class TtlQueueConfig {
         HashMap<String, Object> arguments = new HashMap<>(3);
         arguments.put("x-dead-letter-exchange",Y_DEAD_LETTER_EXCHANGE);
         arguments.put("x-dead-letter-routing-key","YD");
-        arguments.put("x-message-ttl",4000*10);
+        arguments.put("x-message-ttl",1000*2);
         return  QueueBuilder.durable(QUEUE_B).withArguments(arguments).build();
     }
 

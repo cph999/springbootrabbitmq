@@ -5,7 +5,7 @@ import org.springframework.amqp.core.Message;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.stereotype.Component;
 
-import java.nio.channels.Channel;
+import com.rabbitmq.client.Channel;
 import java.nio.charset.StandardCharsets;
 import java.util.Date;
 
